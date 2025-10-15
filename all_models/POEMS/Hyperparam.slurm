@@ -10,7 +10,7 @@
 module load mamba
 source activate conda-example
 
-experiment_note="mocsMM-5000Epoch-Silhouette-HyperparamTuning-EarlyAll"
+experiment_note="mocsMM-HyperparamTuning-EarlyAll"
 disease="brca"
 #disease="kirc"
 lr=(0.0001 0.0003 0.0005 0.0007 0.0009)
