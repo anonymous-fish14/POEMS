@@ -203,10 +203,10 @@ def train_POEMS(lr_in, wd_in, batch_size_in, nepoch_in, is_wandb, experiment_not
     
     
     if(is_test):
-        model.load_state_dict(torch.load(str(cwd) + "/trained/" + trained_model_name + "/"+"model"))
+        model.load_state_dict(torch.load(str(cwd) + "/trained/" + trained_model_name + "/"+"model.pth"))
     else:
         os.makedirs(model_dir,exist_ok=True)
-        torch.save(model.state_dict(), model_dir+"model")
+        torch.save(model.state_dict(), model_dir+"model.pth")
     # EVALUATION
     model.eval()
     # test_model = copy.deepcopy(model).to(device)
